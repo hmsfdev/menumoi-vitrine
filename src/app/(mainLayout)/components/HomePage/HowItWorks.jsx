@@ -6,48 +6,52 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import chef1 from "../../../../../public/assets/step1.png";
-import chef2 from "../../../../../public/assets/step2.png";
+import chef1 from "../../../../../public/assets/chef1.png";
+import chef2 from "../../../../../public/assets/chef2.png";
+import chef3 from "../../../../../public/assets/chef4.png";
+import chef4 from "../../../../../public/assets/chef3.png";
 
 const steps = [
   {
-    image: chef1,
-    title: "Début facile",
+    image: chef1, // Image représentant un restaurateur heureux
+    title: "Inscription Simple",
     description:
-      "Visitez MenuMoi et commencez en entrant le nom de votre restaurant, votre numéro de téléphone et votre adresse.",
+      "Rendez-vous sur MenuMoi, entrez les informations de base de votre restaurant : nom, téléphone et adresse. En quelques clics, vous êtes prêt à commencer.",
   },
   {
-    image: chef2,
-    title: "Personnalisez-le",
+    image: chef2, // Image représentant un écran de personnalisation
+    title: "Personnalisation",
     description:
-      "Sélectionnez un modèle de menu numérique et choisissez trois couleurs personnalisées correspondant à votre marque.",
+      "Choisissez un modèle de menu numérique parmi nos designs professionnels et personnalisez-le avec trois couleurs qui reflètent parfaitement votre marque.",
   },
   {
-    image: chef1,
-    title: "Gérer les commandes",
+    image: chef3, // Image montrant un client passant commande via un menu digital
+    title: "Gestion des Commandes",
     description:
-      "Partagez votre lien de menu numérique ou votre code QR avec les clients. Les clients peuvent passer leurs commandes directement via le menu et vous les recevez en temps réel via l'application.",
+      "Partagez votre code QR ou lien de menu numérique avec vos clients. Recevez leurs commandes en temps réel directement via l'application MenuMoi.",
   },
   {
-    image: chef2,
-    title: "Obtenir des réservations",
+    image: chef4, // Image montrant des clients heureux dans un restaurant
+    title: "Réservations Simplifiées",
     description:
-      "Activez les réservations de tables, permettant aux clients de réserver des tables instantanément. Gérer et approuvez les réservations en un seul clic.",
+      "Activez la fonction réservation pour permettre à vos clients de réserver leurs tables en ligne. Gérez et approuvez facilement les réservations en un seul clic.",
   },
 ];
+
 
 const HowItWorks = () => {
   return (
     <div className="bg-white py-8 lg:py-16">
       <div className="max-w-8xl mx-auto px-5 lg:px-10 text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold text-gray-900 mb-6">
-          Comment Ça Fonctionne
-        </h2>
-        <p className="text-gray-600 max-w-2xl text-center mx-auto text-sm mb-12 leading-relaxed">
-          Avec MenuMoi, Vous Pouvez Présenter Votre Menu, Accepter Des Commandes
-          Et Même Gérer Les Réservations De Table – Tout Cela Depuis Une
-          Plateforme Simplifiée.
-        </p>
+      <h2 className="text-3xl lg:text-5xl font-semibold text-gray-900 mb-6">
+  Découvrez Comment Ça Marche
+</h2>
+<p className="text-gray-600 max-w-2xl text-center mx-auto text-sm mb-12 leading-relaxed">
+  Avec <b>MenuMoi</b>, transformez votre restaurant en une expérience moderne et intuitive. 
+  Présentez votre menu digital, acceptez des commandes en ligne et gérez facilement les 
+  réservations de table – tout cela depuis une plateforme centralisée et facile à utiliser.
+</p>
+
 
         {/* Steps Grid for Desktop */}
         <div className="hidden lg:grid grid-cols-4 gap-8">
@@ -60,8 +64,8 @@ const HowItWorks = () => {
                 <Image
                   src={step.image}
                   alt={step.title}
-                  width={155}
-                  height={160}
+                  width={135}
+                  height={140}
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">
@@ -88,8 +92,8 @@ const HowItWorks = () => {
                       <Image
                         src={step.image}
                         alt={step.title}
-                        width={150}
-                        height={150}
+                        width={100}
+                        height={100}
                       />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">

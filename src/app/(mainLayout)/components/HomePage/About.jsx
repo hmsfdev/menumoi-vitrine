@@ -8,52 +8,54 @@ import checkIcon from "../../../../../public/assets/check-verified-02.png";
 const About = () => {
   const details = [
     {
-      title: "Installation Facile",
+      title: "Configuration Rapide",
       description:
-        "Installez en quelques minutes sans avoir besoin de compétences techniques.",
+        "Mettez en place votre menu digital en moins de 10 minutes, sans besoin de compétences techniques.",
     },
     {
-      title: "Expérience Client Améliorée",
+      title: "Expérience Client Optimisée",
       description:
-        "Offrez une expérience utilisateur fluide et moderne à vos clients.",
+        "Impressionnez vos clients avec une interface moderne et intuitive, disponible partout et à tout moment.",
     },
     {
-      title: "Efficacité Accrue",
+      title: "Gestion Simplifiée",
       description:
-        "Gagnez du temps en automatisant les processus de gestion des menus.",
+        "Réduisez vos efforts grâce à une plateforme qui automatise la gestion des commandes et des réservations.",
     },
   ];
+  
   return (
     <div className="bg-gradient-to-b from-[#f5f5f5] to-[#ffffff] pt-10 lg:pt-20 pb-10 px-6 lg:px-16 max-w-full ">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
           {/* Left Section */}
           <div className="lg:w-1/2 text-left">
-            <button>
-              <span className="hidden text-xl font-semibold bg-[#5E8F3F] text-black px-5 py-3 rounded-full mb-5 lg:inline-block">
-                À Propos
-              </span>
-            </button>
-            <h2 className="hidden lg:block text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 ">
-              Menus Numériques <br /> Simplifiés
-            </h2>
-            <h2 className="text-3xl text-center lg:hidden font-semibold text-gray-900 mb-4">
-              Menus Numériques Simplifiés
-            </h2>
-            <div className="lg:hidden flex justify-center items-center ms-8 -mt-10">
-              <Image
-                src={mobileImage}
-                alt="Mobile Mockup"
-                width={600}
-                height={700}
-                className="object-contain"
-              />
-            </div>
-            <p className="lg:w-1/2 text-[#272727] text-sm my-8 text-center lg:text-left">
-              Avec MenuMoi, Vous Pouvez Présenter Votre Menu, Accepter Des
-              Commandes Et Même Gérer Les Réservations De Table – Tout Cela
-              Depuis Une Plateforme Simple Et Intuitive.
-            </p>
+          <button>
+      <span className="hidden text-xl font-semibold bg-[#5E8F3F] text-white px-5 py-3 rounded-full mb-5 lg:inline-block">
+        En Savoir Plus
+      </span>
+    </button>
+    <h2 className="hidden lg:block text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+      Révolutionnez <br /> Vos Menus Digitaux
+    </h2>
+    <h2 className="text-3xl text-center lg:hidden font-bold text-gray-900 mb-4">
+      Révolutionnez Vos Menus Digitaux
+    </h2>
+    <div className="lg:hidden flex justify-center items-center ms-8 -mt-10">
+      <Image
+        src={mobileImage}
+        alt="Aperçu Mobile"
+        width={600}
+        height={700}
+        className="object-contain"
+      />
+    </div>
+    <p className="lg:w-1/2 text-[#272727] text-sm my-8 text-center lg:text-left">
+      Transformez votre restaurant avec <b>MenuMoi</b>. Simplifiez la gestion de votre menu,
+      acceptez des commandes en ligne et gérez vos réservations facilement, 
+      tout cela depuis une plateforme intuitive et moderne.
+    </p>
+
 
             {/* Features List */}
             <div className="hidden lg:block space-y-8">

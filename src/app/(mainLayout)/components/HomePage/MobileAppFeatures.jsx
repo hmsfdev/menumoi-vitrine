@@ -13,8 +13,8 @@ const MobileAppFeatures = () => {
         {/* Left Section */}
         <div className="hidden lg:w-1/2 lg:flex justify-end items-center relative ">
           <Image
-            src={mobileImage}
-            alt="Mobile Mockup"
+            src={mobileImage} // Mockup montrant le mode cuisine
+            alt="Mode Cuisine Mockup"
             className="object-contain w-72 md:w-96 lg:w-[450px] lg:h-[700px]"
           />
         </div>
@@ -24,21 +24,21 @@ const MobileAppFeatures = () => {
           {/* Header */}
           <button>
             <span className="hidden text-sm bg-[#5E8F3F] text-black px-5 py-3 rounded-full mb-10 lg:inline-block">
-              Caractéristiques
+              Fonctionnalités
             </span>
           </button>
           <h2 className="text-3xl text-center lg:text-left lg:text-5xl font-semibold text-gray-900 mb-6">
-            Finaliser Via <br /> L'application Mobile
+            Simplifiez Votre <br /> Cuisine avec MenuMoi
           </h2>
           <div className="md:hidden flex justify-center items-center relative ms-20">
             <Image
-              src={mobileImage}
-              alt="Mobile Mockup"
+              src={mobileImage} // Mockup du mode cuisine sur mobile
+              alt="Mode Cuisine Mockup"
               className="object-contain w-72 md:w-96 lg:w-[450px] lg:h-[700px]"
             />
           </div>
           <p className="text-gray-600 text-sm mb-10 leading-relaxed text-center lg:text-left">
-            Connectez-vous En Utilisant Vos Identifiants.
+            Transformez votre cuisine en un espace connecté. Gérez vos commandes en temps réel et suivez chaque étape jusqu’à leur livraison.
           </p>
 
           {/* Features List */}
@@ -53,14 +53,12 @@ const MobileAppFeatures = () => {
                   className=""
                 />
               </div>
-
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">
-                  Personnalisez votre menu
+                  Commandes en Temps Réel
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Ajustez facilement les couleurs, le style et les contenus pour
-                  refléter votre marque.
+                  Affichez les commandes reçues en temps réel et leur état : "En préparation", "Prête", ou "Servie".
                 </p>
               </div>
             </div>
@@ -76,11 +74,10 @@ const MobileAppFeatures = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">
-                  Ajuster Le Menu
+                  Gestion Simplifiée
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Mettez à jour vos options de menu à la volée depuis
-                  l'application.
+                  Glissez-déposez les commandes pour mettre à jour leur statut en un clic.
                 </p>
               </div>
             </div>
@@ -98,11 +95,10 @@ const MobileAppFeatures = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 text-center my-4">
-                  Personnalisez votre menu
+                  Commandes en Temps Réel
                 </h3>
                 <p className="text-gray-600 text-sm text-center">
-                  Ajustez facilement les couleurs, le style et les contenus pour
-                  refléter votre marque.
+                  Affichez les commandes reçues en temps réel et leur état : "En préparation", "Prête", ou "Servie".
                 </p>
               </div>
             </div>
@@ -116,14 +112,12 @@ const MobileAppFeatures = () => {
                   className=""
                 />
               </div>
-
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 text-center my-4">
-                  Ajuster Le Menu
+                  Gestion Simplifiée
                 </h3>
                 <p className="text-gray-600 text-sm text-center">
-                  Mettez à jour vos options de menu à la volée depuis
-                  l'application.
+                  Glissez-déposez les commandes pour mettre à jour leur statut en un clic.
                 </p>
               </div>
             </div>

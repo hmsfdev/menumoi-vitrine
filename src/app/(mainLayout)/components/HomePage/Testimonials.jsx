@@ -47,119 +47,112 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 py-20 relative overflow-hidden">
-      <div className="absolute inset-0 py-10 lg:py-20 ">
-        <Image
-          src={bg}
-          alt="background image"
-          quality={100}
-          className="opacity-40 object-cover h-full"
-        />
-      </div>
-
-      <h2 className="text-4xl lg:text-5xl text-center lg:mt-10 mb-4 font-semibold">
-        Ce Que Dit Notre Client Satisfait
+    <div className="bg-gray-50 py-20">
+    <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8">
+        Les Défis des Restaurateurs Modernes
       </h2>
-      <p className="text-lg text-center mb-16 text-gray-700">
-        Ce Qui En Fait Le Meilleur Endroit Pour Commencer À Trader
+      <p className="text-lg text-center text-gray-600 mb-12">
+        Nous avons identifié les problèmes courants rencontrés par les restaurants. Voici comment MenuMoi les résout efficacement.
       </p>
-
-      <Swiper
-        slidesPerView={isMobile ? 1 : 2.3}
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        loop={true}
-        pagination={
-          isMobile && {
-            clickable: true,
-          }
-        }
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper -mt-10 mr-20"
-      >
-        {testimonials.map((t, i) => (
-          <>
-            <SwiperSlide key={i}>
-              <div className="py-10 ">
-                <div className="bg-white p-4 lg:p-8 rounded-xl flex flex-col justify-center items-center">
-                  <div className="relative w-full">
-                    <Image
-                      src={t?.image}
-                      alt=""
-                      className="absolute left-0 right-0 -top-16 lg:-top-20 mx-auto"
-                    />
-                  </div>
-                  <div className="flex gap-1 my-2">
-                    {Array(5)
-                      .fill(null)
-                      .map((_, index) => (
-                        <svg
-                          key={index}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="size-5 text-[#5E8F3F]"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      ))}
-                  </div>
-                  <p className="font-bold lg:text-lg">{t.name}</p>
-                  <p className="text-center text-[#898989] mt-4">{t.quote}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          </>
-        ))}
-        {testimonials.map((t, i) => (
-          <>
-            <SwiperSlide key={i}>
-              <div className="py-10 ">
-                <div className="bg-white p-4 lg:p-8 rounded-xl flex flex-col justify-center items-center">
-                  <div className="relative w-full">
-                    <Image
-                      src={t?.image}
-                      alt=""
-                      className="absolute left-0 right-0 -top-16 lg:-top-20 mx-auto"
-                    />
-                  </div>
-                  <div className="flex gap-1 my-2">
-                    {Array(5)
-                      .fill(null)
-                      .map((_, index) => (
-                        <svg
-                          key={index}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="size-5 text-[#5E8F3F]"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      ))}
-                  </div>
-                  <p className="font-bold lg:text-lg">{t.name}</p>
-                  <p className="text-center text-[#898989] mt-4">{t.quote}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          </>
-        ))}
-      </Swiper>
+  
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Item 1 */}
+        <div className="flex items-start gap-4">
+          <div className="bg-[#5E8F3F]/10 p-4 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-[#5E8F3F]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9.75 21h4.5m2.25-4.5a6 6 0 10-9 0M3 13.5h18m-2.25-7.5a4.5 4.5 0 11-9 0"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg text-gray-900">
+              Gestion des commandes complexe
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Les commandes sur papier ou par téléphone prennent du temps et augmentent le risque d'erreurs.
+            </p>
+            <p className="text-sm text-[#5E8F3F] font-medium mt-2">
+              <span className="font-bold">MenuMoi :</span> Digitalisez vos commandes avec un menu interactif simple et intuitif.
+            </p>
+          </div>
+        </div>
+  
+        {/* Item 2 */}
+        <div className="flex items-start gap-4">
+          <div className="bg-[#5E8F3F]/10 p-4 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-[#5E8F3F]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5.121 18.364l1.414-1.414a2 2 0 112.828 0l1.415 1.414a2 2 0 002.829 0l1.415-1.414a2 2 0 012.828 0l1.414 1.414m-9-4.95a2 2 0 012.828 0m2.828 2.828a2 2 0 012.828 0m-9 4.95h9"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg text-gray-900">
+              Difficulté à gérer les réservations
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Les réservations manuelles sont souvent source de confusion et de double réservation.
+            </p>
+            <p className="text-sm text-[#5E8F3F] font-medium mt-2">
+              <span className="font-bold">MenuMoi :</span> Offrez une réservation en ligne, instantanée et bien organisée.
+            </p>
+          </div>
+        </div>
+  
+        {/* Item 3 */}
+        <div className="flex items-start gap-4">
+          <div className="bg-[#5E8F3F]/10 p-4 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-[#5E8F3F]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13.828 21a2 2 0 001.414-.586l4.828-4.828a2 2 0 000-2.828l-4.828-4.828a2 2 0 00-2.828 0L9.343 9.343a2 2 0 000 2.828l1.414 1.414a2 2 0 002.828 0l1.415-1.414a2 2 0 010-2.828L9.343 3.515a4 4 0 00-5.656 0l-4.828 4.828a4 4 0 000 5.656l4.828 4.828a4 4 0 005.656 0l4.828-4.828a4 4 0 000-5.656l-1.414-1.414"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg text-gray-900">
+              Intégration des paiements en ligne
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Les paiements en ligne peuvent être complexes à intégrer et à gérer.
+            </p>
+            <p className="text-sm text-[#5E8F3F] font-medium mt-2">
+              <span className="font-bold">MenuMoi :</span> Intégrez Stripe et recevez vos paiements instantanément.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  
   );
 };
 

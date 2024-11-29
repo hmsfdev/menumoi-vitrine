@@ -20,6 +20,7 @@ const Preview = ({ setState }) => {
             className="relative flex flex-col flex-wrap items-start gap-3 border border-[#009944]/10 px-10 py-5 hover:cursor-pointer rounded-lg"
           >
             <input
+            onChange={() => handleRadioChange(1)}
               className="peer h-4 w-4 cursor-pointer appearance-none rounded border-2 border-slate-500 bg-white transition-colors checked:border-[#5E8F3F] checked:bg-[#5E8F3F] checked:hover:border-[#5E8F3F] checked:hover:bg-[#5E8F3F] focus:outline-none checked:focus:border-[#5E8F3F] checked:focus:bg-[#5E8F3F] focus-visible:outline-none disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-50"
               type="radio"
               checked={selectedValue === 1}
@@ -54,6 +55,7 @@ const Preview = ({ setState }) => {
             className="relative flex flex-col flex-wrap items-start gap-3 border border-[#009944]/10 px-10 py-5 hover:cursor-pointer rounded-lg"
           >
             <input
+              onChange={() => handleRadioChange(2)}
               className="peer h-4 w-4 cursor-pointer appearance-none rounded border-2 border-slate-500 bg-white transition-colors checked:border-[#5E8F3F] checked:bg-[#5E8F3F] checked:hover:border-[#5E8F3F] checked:hover:bg-[#5E8F3F] focus:outline-none checked:focus:border-[#5E8F3F] checked:focus:bg-[#5E8F3F] focus-visible:outline-none disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-50"
               type="radio"
               checked={selectedValue === 2}
@@ -88,6 +90,7 @@ const Preview = ({ setState }) => {
             className="relative flex flex-col flex-wrap items-start gap-3 border border-[#009944]/10 px-10 py-5 hover:cursor-pointer rounded-lg"
           >
             <input
+            onChange={() => handleRadioChange(3)}
               className="peer h-4 w-4 cursor-pointer appearance-none rounded border-2 border-slate-500 bg-white transition-colors checked:border-[#5E8F3F] checked:bg-[#5E8F3F] checked:hover:border-[#5E8F3F] checked:hover:bg-[#5E8F3F] focus:outline-none checked:focus:border-[#5E8F3F] checked:focus:bg-[#5E8F3F] focus-visible:outline-none disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-50"
               type="radio"
               checked={selectedValue === 3}
