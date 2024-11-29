@@ -31,6 +31,11 @@ const features = [
     title: "Notifications en Temps Réel",
     description: "Recevez des alertes instantanées pour chaque commande ou réservation.",
   },
+  {
+    title: "Analyse et Statistiques",
+    description: "Accédez à des données précieuses sur les ventes, les commandes et les réservations pour améliorer vos performances.",
+  }
+  
 ];
 
 const SubscriptionPlan = () => {
