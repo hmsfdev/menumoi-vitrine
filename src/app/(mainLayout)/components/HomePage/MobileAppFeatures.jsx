@@ -8,7 +8,7 @@ import checkIcon from "../../../../../public/assets/check-verified-02.png";
 
 const MobileAppFeatures = () => {
   return (
-    <div className="mx-auto max-w-full mt-10 lg:-mb-28 mb-0">
+    <section id="features" className="mx-auto max-w-full mt-10 lg:-mb-28 mb-0">
       <div className="bg-white flex flex-col-reverse lg:flex-row">
         {/* Left Section */}
         <div className="hidden lg:w-1/2 lg:flex justify-end items-center relative ">
@@ -124,7 +124,7 @@ const MobileAppFeatures = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

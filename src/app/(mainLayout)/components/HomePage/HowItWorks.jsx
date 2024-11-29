@@ -38,20 +38,19 @@ const steps = [
   },
 ];
 
-
 const HowItWorks = () => {
   return (
     <div className="bg-white py-8 lg:py-16">
       <div className="max-w-8xl mx-auto px-5 lg:px-10 text-center">
-      <h2 className="text-3xl lg:text-5xl font-semibold text-gray-900 mb-6">
-  Découvrez Comment Ça Marche
-</h2>
-<p className="text-gray-600 max-w-2xl text-center mx-auto text-sm mb-12 leading-relaxed">
-  Avec <b>MenuMoi</b>, transformez votre restaurant en une expérience moderne et intuitive. 
-  Présentez votre menu digital, acceptez des commandes en ligne et gérez facilement les 
-  réservations de table – tout cela depuis une plateforme centralisée et facile à utiliser.
-</p>
-
+        <h2 className="text-3xl lg:text-5xl font-semibold text-gray-900 mb-6">
+          Découvrez Comment Ça Marche
+        </h2>
+        <p className="text-gray-600 max-w-2xl text-center mx-auto text-sm mb-12 leading-relaxed">
+          Avec <b>MenuMoi</b>, transformez votre restaurant en une expérience
+          moderne et intuitive. Présentez votre menu digital, acceptez des
+          commandes en ligne et gérez facilement les réservations de table –
+          tout cela depuis une plateforme centralisée et facile à utiliser.
+        </p>
 
         {/* Steps Grid for Desktop */}
         <div className="hidden lg:grid grid-cols-4 gap-8">
@@ -66,6 +65,7 @@ const HowItWorks = () => {
                   alt={step.title}
                   width={135}
                   height={140}
+                  className="w-36 h-48"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">

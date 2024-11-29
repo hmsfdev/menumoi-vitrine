@@ -2,19 +2,47 @@
 
 import Link from "next/link";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import logo from "../../../../../public/assets/Group (7).png";
 import Image from "next/image";
 import cn from "../../../../utils/cn";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const pathname = usePathname();
+  
+  // Detect section visibility based on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let found = "";
+      
+      sections.forEach((section) => {
+        const { top, bottom } = section.getBoundingClientRect();
+        if (top <= 0 && bottom >= 0) {
+          found = section.id; // Get the ID of the section currently in view
+        }
+      });
+
+      setActiveSection(found);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navItems = [
     { label: "Accueil", href: "/" },
-    { label: "À Propos", href: "/" },
-    { label: "Témoignages", href: "/" },
-    { label: "Fonctionnalités", href: "/" },
+    { label: "À Propos", href: "/#about" },
+    { label: "Témoignages", href: "/#testimonials" },
+    { label: "Fonctionnalités", href: "/#features" },
   ];
 
   return (
@@ -28,18 +56,17 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="hidden xl:flex gap-10">
-            <li className="capitalize text-[#5E8F3F]">
-              <Link href="/">Accueil</Link>
-            </li>
-            <li className="capitalize">
-              <Link href="/">À Propos</Link>
-            </li>
-            <li className="capitalize">
-              <Link href="/">Témoignages</Link>
-            </li>
-            <li className="capitalize">
-              <Link href="/">Fonctionnalités</Link>
-            </li>
+            {navItems.map((item) => (
+              <li
+                key={item.label}
+                className={cn(
+                  "capitalize",
+                  activeSection === item.href.slice(1) && "text-[#5E8F3F]" // Highlight the active section
+                )}
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
 
           {/* Desktop Button */}
@@ -73,7 +100,10 @@ const Navbar = () => {
             {navItems.map((item) => (
               <li
                 key={item.label}
-                className="capitalize text-black text-lg font-medium"
+                className={cn(
+                  "capitalize text-black text-lg font-medium",
+                  activeSection === item.href.slice(1) && "text-[#5E8F3F]" // Highlight active section
+                )}
               >
                 <Link href={item.href}>{item.label}</Link>
               </li>

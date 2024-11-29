@@ -25,7 +25,7 @@ const About = () => {
   ];
   
   return (
-    <div className="bg-gradient-to-b from-[#f5f5f5] to-[#ffffff] pt-10 lg:pt-20 pb-10 px-6 lg:px-16 max-w-full ">
+    <section id="about" className="bg-gradient-to-b from-[#f5f5f5] to-[#ffffff] pt-10 lg:pt-20 pb-10 px-6 lg:px-16 max-w-full ">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
           {/* Left Section */}
@@ -121,7 +121,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
