@@ -7,15 +7,10 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  keywords: [
-    "menu digital",
-    "restaurant",
-    "QR code",
-    "gestion de commandes",
-    "MenuMoi",
-  ],
+  keywords: "menu digital, restaurant, QR code, gestion de commandes, MenuMoi,reservation,manger,uber",
   author: "MenuMoi",
 };
+
 
 export default function RootLayout({ children }) {
   return (
