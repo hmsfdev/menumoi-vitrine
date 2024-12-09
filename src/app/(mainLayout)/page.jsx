@@ -6,6 +6,7 @@ import HowItWorks from "./components/HomePage/HowItWorks";
 import SubscriptionPlans from "./components/HomePage/SubscriptionPlans";
 import MobileAppFeatures from "./components/HomePage/MobileAppFeatures";
 import Testimonials from "./components/HomePage/Testimonials";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <Partners />
       <About />
       <HowItWorks />
+      <SpeedInsights />
       <SubscriptionPlans />
       <MobileAppFeatures />
       <Testimonials />
