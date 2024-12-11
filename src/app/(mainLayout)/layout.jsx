@@ -2,14 +2,15 @@ import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 
 export const metadata = {
-  title: "MenuMoi - Simplifiez vos menus",
-  description: "Transformez vos menus en expériences numériques modernes avec MenuMoi.",
+  title: "MenuMoi - La solution tout-en-un pour la gestion de restaurant",
+  description: "MenuMoi transforme l'expérience des restaurants avec un menu digital personnalisable, la gestion des commandes, et la réservation de tables.",
   icons: {
     icon: "/favicon.ico",
   },
-  keywords: "menu digital, restaurant, QR code, gestion de commandes, MenuMoi,reservation,manger,uber",
+  keywords: "menu digital, gestion de restaurant, QR code, gestion des commandes, réservation de table, application cuisine, MenuMoi",
   author: "MenuMoi",
 };
+
 
 
 export default function RootLayout({ children }) {
