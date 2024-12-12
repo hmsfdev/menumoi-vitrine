@@ -4,9 +4,11 @@ const CreateProfile = ({ setState }) => {
   const [primary, setPrimary] = useState("#FFCC10");
   const [secondary, setSecondary] = useState("#FF8610");
   const [tartiary, setTartiary] = useState("#5E8F3F");
+  const [errorMessage, setErrorMessage] = useState(""); // État pour les messages d'erreur
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
 
     const form = e.target;
     const name = form.name.value;
@@ -29,10 +31,19 @@ const CreateProfile = ({ setState }) => {
     };
 
     console.log(formData);
-
-    if (formData) {
-      setState("preview");
+    if (!name || !email || !number || !password || !restaurant) {
+      setErrorMessage("Tous les champs marqués d'une * sont obligatoires.");
+      return;
     }
+
+    
+    if (formData) {
+      setErrorMessage(""); // Réinitialise l'erreur si tout est bon
+      setState("preview");
+  
+    }
+
+    
   };
   return (
     <div className="container mx-auto py-10 px-5">
@@ -42,6 +53,26 @@ const CreateProfile = ({ setState }) => {
 <p className="text-gray-600 text-sm lg:text-base text-center mb-6 lg:mb-16">
   Remplissez les informations nécessaires pour personnaliser votre expérience sur MenuMoi.
 </p>
+{errorMessage && (
+  <div
+    className="mb-6 p-4 rounded-md border text-sm"
+    style={{
+      overflow: "visible",
+      marginBottom: "25px",
+      padding: "22px 12px 22px 47px",
+      position: "relative",
+      borderWidth: "1px",
+      borderStyle: "solid",
+      borderColor: "rgb(248, 205, 210)",
+      backgroundColor: "rgb(253, 236, 237)",
+      borderRadius: "4px",
+      color: "#721c24", // Pour le texte
+    }}
+  >
+    {errorMessage}
+  </div>
+)}
+
 
   
     <form onSubmit={handleSubmit}>
@@ -83,7 +114,7 @@ const CreateProfile = ({ setState }) => {
             type="tel"
             name="number"
             id="number"
-            pattern="^\\d{10}$"
+   
             className="mt-2 px-5 py-3 w-full bg-white border border-[#C1C1C1] rounded-lg font-semibold"
             placeholder="06 12 34 56 78"
             required
@@ -120,15 +151,16 @@ const CreateProfile = ({ setState }) => {
         </div>
         <div className="w-full relative">
           <label htmlFor="color" className="text-[#ACACAC]">
-            Choisissez le thème de couleur
+            Sélectionnez vos couleurs
           </label>
           <div className="mt-3 flex justify-between items-center gap-3">
+            {/* Couleur Primaire */}
             <div className="flex justify-center items-center gap-2">
               <label htmlFor="primary" className="text-[#737373]">
-                Primaire :
+                Principale
               </label>
               <div
-                className="bg-red-500 size-8 rounded-full overflow-hidden"
+                className="size-8 rounded-full overflow-hidden"
                 style={{ backgroundColor: primary }}
               >
                 <input
@@ -141,12 +173,14 @@ const CreateProfile = ({ setState }) => {
                 />
               </div>
             </div>
+
+            {/* Couleur Secondaire */}
             <div className="flex justify-center items-center gap-2">
               <label htmlFor="secondary" className="text-[#737373]">
-                Secondaire :
+                Secondaire
               </label>
               <div
-                className="bg-red-500 size-8 rounded-full overflow-hidden"
+                className="size-8 rounded-full overflow-hidden"
                 style={{ backgroundColor: secondary }}
               >
                 <input
@@ -159,24 +193,15 @@ const CreateProfile = ({ setState }) => {
                 />
               </div>
             </div>
-            <div className="flex justify-center items-center gap-2">
-              <label htmlFor="tertiary" className="text-[#737373]">
-                Tertiaire :
-              </label>
-              <div
-                className="bg-red-500 size-8 rounded-full overflow-hidden"
-                style={{ backgroundColor: tartiary }}
-              >
-                <input
-                  onChange={(e) => setTartiary(e.target.value)}
-                  type="color"
-                  name="tertiary"
-                  id="tertiary"
-                  className="rounded-full size-20 translate-x-[-25%] translate-y-[-25%]"
-                  defaultValue={tartiary}
-                />
-              </div>
-            </div>
+
+            {/* Couleur Tertiaire (cachée) */}
+            <input
+              type="hidden"
+              name="tertiary"
+              id="tertiary"
+              value="#FFFFFF" // Couleur par défaut
+              onChange={(e) => setTartiary(e.target.value)}
+            />
           </div>
         </div>
       </div>
