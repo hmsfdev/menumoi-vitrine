@@ -137,7 +137,7 @@ const CreateProfile = ({ setState }) => {
 
       } catch (error) {
         console.error("Erreur réseau :", error);
-        alert("Impossible de soumettre les données, veuillez réessayer.");
+        setErrorMessage("Impossible de soumettre les données, veuillez réessayer.");
       }
 
    
