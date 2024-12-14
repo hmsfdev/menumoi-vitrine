@@ -131,7 +131,7 @@ const CreateProfile = ({ setState }) => {
             tertiary: tartiary,         // Couleur tertiaire
           },
         });
-        setErrorMessage(""); // Réinitialise l'erreur si tout est bon
+        setErrorMessage(""); // Réinitialise l'erreur si tout est bon ?
 
       } catch (error) {
         console.error("Erreur réseau :", error);
