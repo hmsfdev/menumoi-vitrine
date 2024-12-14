@@ -25,7 +25,7 @@ const GetStarted = () => {
     <div className="bg-[#f5f5f5] w-full pt-12 lg:pt-20 lg:px-16">
      
       {state === "create-profile" && <CreateProfile setState={setState} />}
-      {state === "preview" && <Preview setState={setState} />}
+      {state.page === "preview" && <Preview setState={setState} restaurantName={state.restaurantName} themeColors={state.themeColors} />}
       {state === "plan" && <Plan setState={setState} />}
       {state === "congrats" && <Congrats setState={setState} />}
     </div>

@@ -1,19 +1,21 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Preview = ({ setState }) => {
+const Preview = ({ setState, restaurantName, themeColors }) => {
   const [selectedValue, setSelectedValue] = useState(null);
 
-  const handleRadioChange = (value) => {
+   const handleRadioChange = (value) => {
     setSelectedValue(value);
   };
 
   return (
     <div className="px-5">
       <div className="container mx-auto py-10 lg:py-20">
-        <h1 className="text-[#565656] text-3xl lg:text-4xl font-semibold text-center mb-6 lg:mb-16">
-          Aperçu du restaurant
-        </h1>
+      <h1 className="text-[#565656] text-3xl lg:text-4xl font-semibold text-center mb-6 lg:mb-16">
+      Prévisualisez le menu digital chez :{" "}
+        <span className="text-[#5E8F3F] font-bold">{restaurantName}</span>
+      </h1>
+
         <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
           <div
             onClick={() => handleRadioChange(1)}
