@@ -258,7 +258,7 @@ const CreateProfile = ({ setState }) => {
           <label htmlFor="color" className="text-[#ACACAC]">
             Sélectionnez vos couleurs
           </label>
-          <div className="mt-3 flex justify-between items-center gap-3">
+          <div className="mt-3 flex  items-center gap-3">
             {/* Couleur Primaire */}
             <div className="flex justify-center items-center gap-2">
               <label htmlFor="primary" className="text-[#737373]">
