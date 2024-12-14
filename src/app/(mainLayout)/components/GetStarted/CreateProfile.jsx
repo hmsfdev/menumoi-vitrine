@@ -137,7 +137,11 @@ const CreateProfile = ({ setState }) => {
 
       } catch (error) {
         console.error("Erreur réseau :", error);
-        setErrorMessage("Impossible de soumettre les données, veuillez réessayer.");
+        setErrorMessage(`
+          <p>Impossible de soumettre les données, veuillez réessayer.</p>
+          <p>Si le problème persiste, <strong>contactez-nous</strong> à <a href="mailto:contact@menumoi.fr" class="text-blue-600 underline">contact@menumoi.fr</a>.</p>
+        `);
+        
       }
 
    
@@ -167,12 +171,12 @@ const CreateProfile = ({ setState }) => {
       borderColor: "rgb(248, 205, 210)",
       backgroundColor: "rgb(253, 236, 237)",
       borderRadius: "4px",
-      color: "#721c24", // Pour le texte
+      color: "#721c24",
     }}
-  >
-    {errorMessage}
-  </div>
+    dangerouslySetInnerHTML={{ __html: errorMessage }}
+  ></div>
 )}
+
 
 
   
