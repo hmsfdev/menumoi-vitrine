@@ -1,10 +1,12 @@
+
 import React, { useState,useEffect } from "react";
 import { useSearchParams } from 'next/navigation'
 
 const CreateProfile = ({ setState }) => {
+  const searchParams = useSearchParams()
+
   var URL_api = 'http://127.0.0.1:8000/api';
     // Récupère le token depuis l'URL
-    const searchParams = useSearchParams()
  
     const tokenFromUrl = searchParams.get('token')
   useEffect(() => {
@@ -144,6 +146,7 @@ const CreateProfile = ({ setState }) => {
     
   };
   return (
+    
     <div className="container mx-auto py-10 px-5">
  <h1 className="text-[#565656] text-3xl lg:text-4xl font-semibold text-center mb-2 lg:mb-4">
   Créez votre profil
